@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/layoutLeft"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCarTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/shape_title"
+            android:gravity="center"
+            android:text="Car Control"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:id="@+id/layoutButtonRowCar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCarTitle"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCarSpeedMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Speed Mode" />
+
+            <Button
+                android:id="@+id/btnCarDirectionMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Direction Mode" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutButtonRowCar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutButtonRowCar"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCarSensorMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Sensor Mode" />
+
+            <Button
+                android:id="@+id/btnCarSpareMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvPosition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutButtonRowCar2"
+            android:text="좌표나오는곳"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/tvSpeedCmd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPosition"
+            android:text="SpeedCommand"
+            android:textSize="10dp" />
+
+        <ImageView
+            android:id="@+id/ivJoystick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCarTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/ic_joystick" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutRight"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCameraTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/shape_title"
+            android:gravity="center"
+            android:text="CameraControl"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:id="@+id/layoutButtonRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCameraTitle"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnTracking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TrackingMode" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutButtonsTilting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCameraTitle"
+            android:layout_marginTop="150dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutButtonRowUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnTiltingUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="U" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutButtonRowCenter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnTiltingLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="L" />
+
+                <Button
+                    android:id="@+id/btnTiltingNeutral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N" />
+
+                <Button
+                    android:id="@+id/btnTiltingRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutButtonDown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnTiltingDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
